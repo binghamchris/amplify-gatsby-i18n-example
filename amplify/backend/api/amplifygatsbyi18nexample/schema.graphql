@@ -1,0 +1,18 @@
+enum Locale {
+  EN
+  DE
+}
+
+type ContentItemLocalisation @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  locale: Locale
+  item_title: String
+  item_body: String
+  contentitemID: ID! @index(name: "byContentItem")
+}
+
+type ContentItem @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  url_slug: String
+  ContentItemLocalisations: [ContentItemLocalisation] @hasMany(indexName: "byContentItem", fields: ["id"])
+}

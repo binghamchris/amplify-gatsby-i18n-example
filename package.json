@@ -1,0 +1,19 @@
+{
+  "name": "amplify-gatsby-i18n-example",
+  "description": "Example of using Gatsby and i18next with Amplify for content localisation",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "start": "npm run develop",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "gatsby": "^4.24.8",
+    "gatsby-plugin-react-i18next": "^1.2.2",
+    "gatsby-plugin-resolve-src": "^2.1.0",
+    "gatsby-source-filesystem": "^4.9.0",
+    "gatsby-source-graphql": "^4.9.0",
+    "react": "^17.0.2",
+    "react-i18next": "^11.11.4"
+  }
+}
