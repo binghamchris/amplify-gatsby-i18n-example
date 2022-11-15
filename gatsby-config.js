@@ -29,8 +29,8 @@ module.exports = {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         localeJsonSourceName: `locale`,
-        languages: ['EN', 'DE'],
-        defaultLanguage: 'EN',
+        languages: ['en', 'de'],
+        defaultLanguage: 'en',
         siteUrl: process.env.SITE_URL,
         redirect: true,
         i18nextOptions: {
@@ -41,6 +41,12 @@ module.exports = {
           nsSeparator: false
         }
       }
-    }
+    },
+    {
+      resolve: "gatsby-plugin-sass",
+      options: {
+        implementation: require("sass"),
+      },
+    },
   ],
 }

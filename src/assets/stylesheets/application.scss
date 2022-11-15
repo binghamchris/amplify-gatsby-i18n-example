@@ -1,0 +1,19 @@
+@import "settings/__settings";
+@import "util/__util";
+@import "components/__components";
+@import "pages/__pages";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-default;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+
+.link-no-style {
+  color: $white !important;
+}

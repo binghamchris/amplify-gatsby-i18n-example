@@ -1,18 +1,27 @@
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import React from "react"
+import { Link } from 'gatsby-plugin-react-i18next';
+import Layout from "components/Layout";
+import { Container } from "react-bootstrap";
 
-const IndexPage = ({ data }) => (
-  <div>
-    <h1>Amplify i18n Example</h1>
-    {data.amplify.listContentItems.items.map((item, i) => (
-      <Link key={i} to={`items/${item.url_slug}`}>
-        <h2>
-          {item.url_slug}
-        </h2>
-     </Link>
-    ))}
-  </div>
-)
+const IndexPage = ({ data }) => {
+
+  return (
+    <Layout pageName="index">
+      <Container>
+        <br />
+        <h1>Amplify Gatsby i18n Example</h1>
+        {data.amplify.listContentItems.items.map((item) => (
+          <Link to={`/items/${item.url_slug}`}>
+            <h2>
+              {item.ContentItemLocalisations.items[0].item_title}
+            </h2>
+          </Link>
+        ))}
+      </Container>
+    </Layout>
+  );
+};
 
 export default IndexPage;
 
@@ -34,7 +43,7 @@ export const query = graphql`
         items {
           id
           url_slug
-          ContentItemLocalisations {
+          ContentItemLocalisations(filter: {locale: {eq: $language}}) {
             items {
               locale
               item_title

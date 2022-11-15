@@ -13,9 +13,7 @@ export const schema = {
                 "locale": {
                     "name": "locale",
                     "isArray": false,
-                    "type": {
-                        "enum": "Locale"
-                    },
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -165,16 +163,8 @@ export const schema = {
             ]
         }
     },
-    "enums": {
-        "Locale": {
-            "name": "Locale",
-            "values": [
-                "EN",
-                "DE"
-            ]
-        }
-    },
+    "enums": {},
     "nonModels": {},
     "codegenVersion": "3.3.1",
-    "version": "aa75367916b705a0bfc868cdd4264672"
+    "version": "c095d9cb5610dd35fdf66dd5bd4c2a04"
 };

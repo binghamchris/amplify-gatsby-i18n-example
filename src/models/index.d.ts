@@ -2,11 +2,6 @@ import { ModelInit, MutableModel } from "@aws-amplify/datastore";
 // @ts-ignore
 import { LazyLoading, LazyLoadingDisabled, AsyncCollection } from "@aws-amplify/datastore";
 
-export enum Locale {
-  EN = "EN",
-  DE = "DE"
-}
-
 type ContentItemLocalisationMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
@@ -17,7 +12,7 @@ type ContentItemMetaData = {
 
 type EagerContentItemLocalisation = {
   readonly id: string;
-  readonly locale?: Locale | keyof typeof Locale | null;
+  readonly locale?: string | null;
   readonly item_title?: string | null;
   readonly item_body?: string | null;
   readonly contentitemID: string;
@@ -27,7 +22,7 @@ type EagerContentItemLocalisation = {
 
 type LazyContentItemLocalisation = {
   readonly id: string;
-  readonly locale?: Locale | keyof typeof Locale | null;
+  readonly locale?: string | null;
   readonly item_title?: string | null;
   readonly item_body?: string | null;
   readonly contentitemID: string;
