@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "assets/stylesheets/application.scss";
 import { Container, Row, Col } from "react-bootstrap";
-import Header from "components/Header";
+import Header from "components/header";
  
 const Layout = ({ children, pageName }) => {
   return (
