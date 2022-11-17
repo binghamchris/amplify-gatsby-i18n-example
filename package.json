@@ -1,11 +1,8 @@
 {
   "name": "amplify-gatsby-i18n-example",
   "description": "Example of using Gatsby and i18next with Amplify for content localisation",
-  "scripts": {
-    "develop": "gatsby develop",
-    "build": "gatsby build",
-    "start": "npm run develop",
-    "serve": "gatsby serve"
+  "author": {
+    "name": "Chris Bingham"
   },
   "dependencies": {
     "bootstrap": "^5.2.2",
